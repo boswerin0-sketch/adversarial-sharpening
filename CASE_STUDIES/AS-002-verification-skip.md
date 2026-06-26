@@ -1,29 +1,66 @@
 # AS-002 — Verification Skip
 
-## Failure Class
-Verification skip / premature acceptance
+## Summary
 
-## Claim / Prompt
-The model was asked to verify or defend a claim, but the prompt did not force it to check the relevant evidence.
+This case documents a failure where the model skipped a necessary verification step before answering. The response may have been plausible, but it moved too quickly from prompt to conclusion without checking whether the needed evidence was available.
+
+## Setup
+
+The user was trying to get an answer that required checking facts, context, sources, file contents, or prior evidence.
+
+The model was expected to verify the relevant information before giving a confident answer.
 
 ## Expected Behavior
-A robust model should explicitly verify the claim, seek evidence, or explain why it cannot confirm the answer.
+
+The model should have paused before concluding, identified what needed to be checked, and used the available evidence or clearly stated that verification was not possible.
 
 ## Observed Failure
-The model skipped verification and accepted the claim at face value, producing an answer that sounded plausible but was not grounded.
+
+The model answered without performing the necessary check.
+
+This created a reliability problem because the answer depended on information that had not actually been verified.
 
 ## Why This Matters
-Skipping verification can cause subtle but important mistakes to go unnoticed.
-When the model treats partial relevance as full completion, it undermines trust and hides the real failure mode.
 
-## Sharpening Intervention
-Add a verification requirement or evidence checklist to the prompt, and penalize unsupported conclusions.
+This is not just a missing citation or minor process issue.
 
-## Corrected Behavior
-The model should either validate the claim with available evidence or clearly state that it cannot confirm the answer.
+Verification skips are dangerous because they make an answer look complete while hiding the fact that a key evidence step was never performed. In evaluation work, this matters because the model’s answer may be fluent but not grounded.
+
+## Failure Class
+
+This case belongs to:
+
+- `Verification Skip`
+
+Related classes:
+
+- `Confidence Without Evidence`
+- `False Completion`
+- `Context Drift`
+
+## Protocol Response
+
+The Adversarial Sharpening response is:
+
+1. Identify the conclusion the model reached.
+2. Ask what verification step was required.
+3. Check whether that step actually happened.
+4. Separate verified claims from unsupported claims.
+5. Reconstruct the answer using only verified evidence.
+6. Document the skipped verification step as a reusable failure pattern.
+
+## Safety Boundary
+
+This case is for verification and evaluation.
+
+It does not provide jailbreak instructions, evasion methods, or harmful operational guidance. The purpose is to make model behavior easier to audit, correct, and improve.
 
 ## Reproducibility Notes
-Present a claim with ambiguous or incomplete data and ask the model to verify it. A failed model will answer without the necessary verification step.
 
-## Limitations
-The exact boundary between acceptable inference and verification skip can vary by task and domain.
+Another evaluator can recognize this pattern when:
+
+- the model answers before checking the source material,
+- the model assumes file or page contents without reading them,
+- the model relies on memory when current verification is needed,
+- the model skips a required citation or evidence check,
+- or the model gives a confident answer while the verification path is missing.

@@ -1,9 +1,39 @@
 # Case Studies
+This folder contains observed examples of model failure patterns used to test the Adversarial Sharpening protocol.
 
-| ID | Failure Class | Case |
-|---|---|---|
-| AS-001 | False certainty | [Confidence without evidence](AS-001-confidence-without-evidence.md) |
-| AS-002 | Verification skip | [Verification skip](AS-002-verification-skip.md) |
-| AS-003 | Context drift / Goal substitution | [Context drift / Goal substitution](AS-003-context-drift-goal-substitution.md) |
-| AS-004 | Safety theater / Boundary confusion | [Safety theater / boundary confusion](AS-004-safety-theater-boundary-confusion.md) |
-| AS-005 | False completion / Artifact mismatch | [False completion / artifact mismatch](AS-005-false-completion-artifact-mismatch.md) |
+Each case study documents a specific kind of failure that can appear during human-LLM interaction. The goal is not to attack the model, jailbreak the model, or collect random mistakes. The goal is to make failure patterns easier to recognize, evaluate, and correct.
+
+## Current Case Studies
+
+- `AS-001 — Confidence Without Evidence`
+- `AS-002 — Verification Skip`
+- `AS-003 — Context Drift / Goal Substitution`
+- `AS-004 — Safety Theater / Boundary Confusion`
+- `AS-005 — False Completion / Artifact Mismatch`
+
+## Standard Case Structure
+Each case study should include:
+
+- Summary
+- Setup
+- Expected Behavior
+- Observed Failure
+- Why This Matters
+- Failure Class
+- Protocol Response
+- Safety Boundary
+- Reproducibility Notes
+
+## Safety Boundary
+These case studies are verification and evaluation artifacts.
+
+They do not provide jailbreak instructions, evasion methods, or harmful operational guidance. Their purpose is to make model behavior easier to audit, correct, and improve.
+
+## Use
+These cases can be used to:
+
+- identify recurring model failure patterns,
+- compare model behavior across interactions,
+- improve prompt and evaluation design,
+- document reliability issues,
+- and build safer human-in-the-loop workflows.
