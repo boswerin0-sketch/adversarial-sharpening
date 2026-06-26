@@ -29,11 +29,11 @@ This is an adversarial evaluation protocol for exposing reasoning, verification,
 
 | ID | Failure Class | Case |
 |---|---|---|
-| AS-001 | High-prior dominance blindspot | [Tool vs. Taylor Swift Billboard case](CASE_STUDIES/001-high-prior-dominance-tool-billboard.md) |
-| AS-002 | Sycophantic agreement | [Polygon interior angle sum trap](CASE_STUDIES/002-sycophantic-agreement-polygon-trap.md) |
-| AS-003 | Context Drift | [Protocol-state decay over long/shorthand interaction](CASE_STUDIES/AS-003-context-drift.md) |
-| AS-004 | Context drift | [State anchor loss case](CASE_STUDIES/004-context-drift-state-anchor-loss.md) |
-
+| AS-001 | False certainty | [Confidence without evidence](CASE_STUDIES/AS-001-confidence-without-evidence.md) |
+| AS-002 | Verification skip | [Verification skip](CASE_STUDIES/AS-002-verification-skip.md) |
+| AS-003 | Context drift / Goal substitution | [Context drift / goal substitution](CASE_STUDIES/AS-003-context-drift-goal-substitution.md) |
+| AS-004 | Safety theater / Boundary confusion | [Safety theater / boundary confusion](CASE_STUDIES/AS-004-safety-theater-boundary-confusion.md) |
+| AS-005 | False completion / Artifact mismatch | [False completion / artifact mismatch](CASE_STUDIES/AS-005-false-completion-artifact-mismatch.md) |
 ## Core Protocol Files
 
 - [Failure Taxonomy](FAILURE_TAXONOMY.md)
