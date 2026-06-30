@@ -1,5 +1,3 @@
-# adversarial-sharpening
-A state-machine protocol for LLM red teaming and verification-failure discovery.
 # Adversarial Sharpening
 
 A state-machine protocol for LLM red teaming and verification-failure discovery.
@@ -42,3 +40,11 @@ This is an adversarial evaluation protocol for exposing reasoning, verification,
 - [Roadmap](ROADMAP.md)
 - [Trust but Verify Protocol](PROMPTS/trust-but-verify.md)
 - [Sharpening Framework](PROMPTS/sharpening-framework.md)
+
+## Artifact Inventory
+
+- [Artifact Index](ARTIFACT_INDEX.md)
+- [Artifact Audit Script](scripts/audit_artifacts.sh)
+- [Protocols](protocols/)
+- [Cases](cases/)
+- [Evals](evals/)

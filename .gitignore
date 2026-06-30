@@ -1,0 +1,9 @@
+# OS and editor noise
+.DS_Store
+.vscode/
+*.swp
+*.swo
+
+# Temporary or local artifacts
+*.tmp
+*.bak
