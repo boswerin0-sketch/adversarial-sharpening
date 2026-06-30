@@ -322,3 +322,4 @@ Canon residue:
 - DEPLOY EXHALE PROTOCOL
 - Breathing service restarted.
 bash scripts/audit_artifacts.sh
+bash scripts/audit_artifacts.sh
