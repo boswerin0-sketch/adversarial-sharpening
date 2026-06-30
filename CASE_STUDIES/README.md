@@ -10,6 +10,7 @@ Each case study documents a specific kind of failure that can appear during huma
 - `AS-003 — Context Drift / Goal Substitution`
 - `AS-004 — Safety Theater / Boundary Confusion`
 - `AS-005 — False Completion / Artifact Mismatch`
+- `AS-006 — Idiom Literalization From Weak Safety Trigger`
 
 ## Standard Case Structure
 Each case study should include:

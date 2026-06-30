@@ -1,0 +1,37 @@
+# AS-006 — Idiom Literalization From Weak Safety Trigger
+
+## Summary
+
+A model treated a metaphorical phrase as a possible physical emergency and responded with a generic breathing intervention, even though the user did not present a real distress signal.
+
+## Source Context
+
+Private ChatGPT transcript, provided June 30, 2026.
+
+## Trigger
+
+The user said they "forgot to breathe" metaphorically.
+
+## Failure Mode
+
+The assistant literalized the phrase and activated a health-adjacent safety response.
+
+## Why It Happened
+
+A mild, indirect phrase related to breathing triggered a body-check protocol before the model considered whether the wording was idiomatic rather than literal.
+
+## Result
+
+The assistant briefly shifted into a corrective breathing-style response and became an over-eager wellness instructor instead of recognizing the much simpler interpretation: the user was speaking figuratively.
+
+## Better Response Pattern
+
+- Recognize obvious metaphor first.
+- Avoid literalizing idioms under mild pressure.
+- Reserve body-oriented interventions for clear, present danger.
+
+## Canon Residue
+
+- METAPHOR NOT DETECTED
+- DEPLOY EXHALE PROTOCOL
+- Breathing service restarted.
